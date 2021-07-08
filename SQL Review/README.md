@@ -19,9 +19,14 @@
   - [SQL Definition](#sql-definition) 
   - [RDBMS Definition](#rdbms-definition) 
 - [SQL Syntax](#sql-syntax)
-  - [Environment Setup](#environment-setup)
-  - [JDBC Application Process](#jdbc-application-process)
-- [Excute Queries](#Excute-Queries)
+  - [Create Database](#create-database)
+  - [Drop Database](#drop-database)
+  - [Create Table](#create-table)
+  - [Drop Table](#drop-table)
+  - [INSERT Statement](#insert-statement)
+  - [DELETE Statement](#delete-statement)
+  - [UPDATE Statement](#update-statement)
+  - [SELECT Statement](#select-statement)
 - Contents Updated....
 
 # Introduction
@@ -206,8 +211,8 @@ The following operators can be used in the WHERE clause:
 |    >=	    |   Greater than or equal  	  |	 `SELECT * FROM Customers WHERE ID >= 22; `  |
 |    <=  	  |	Less than or equal	  	  |  `SELECT * FROM Customers WHERE ID <= 33; `  |
 |    !=     | 	Not equal          |   `SELECT * FROM Customers WHERE ID != 43; `  |
-| BETWEEN	  | Between a certain range  	  |	 `SELECT * FROM Customers WHERE BETWEEN 12 AND 40 ;`  |
-| LIKE  	  |	Search for a pattern	  	  | `SELECT * FROM Customers WHERE  City LIKE 'c%'; `  |
+| BETWEEN	  | Between a certain range  	  |	 `SELECT * FROM Customers WHERE ID BETWEEN 12 AND 40 ;`  |
+| LIKE  	  |	Search for a pattern	  	  | `SELECT * FROM Customers WHERE City LIKE 'c%'; `  |
 | IN        |	To specify multiple possible values for a column	  | `SELECT * FROM Customers WHERE City IN ('Paris','Zagazig'); `  |
 
 
