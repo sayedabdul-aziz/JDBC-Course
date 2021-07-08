@@ -1,5 +1,5 @@
 ![Java Database Connectivity (JDBC)](https://imgur.com/da4ViM5.png)
-<h3 align="center">Java Database Connectivity (JDBC)</h3>
+<h3 align="center">Java Database Connectivity (JDBC) :tada: </h3>
 <p align="center">
   Path to a free self-taught education in JDBC!
 </p>
@@ -12,17 +12,17 @@
   </a>
 </p>
 
-# Contents
+# Contents :memo:
 
 - [Introduction](#introduction)
   - [JDBC Definition](#jdbc-definition) 
   - [Pre-requisite](#pre-requisite) 
   - [JDBC Architecture](#jdbc-architecture) 
   - [JDBC Driver](#jdbc-driver) 
-- [Connection](#Connection)
+- [Connection](#connection)
   - [Environment Setup](#environment-setup)
   - [JDBC Application Process](#jdbc-application-process)
-- [Excute Queries](#Excute-Queries)
+- 
 - Contents Updated....
 
 # Introduction
@@ -180,8 +180,9 @@ The `getConnection()` method of DriverManager class is used to establish connect
     return DriverManager.getConnection("jdbc:mysql://localhost:3306/DB_Name", "root", ""); 
     }
 
-    
 *to Know about url and Server information* [Click Here]() .
+
+Before `Step (4)`, Go to [Connection JDBC Application](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/Connection) that java code to get Connection with MySQL DB.  
 
 ### 4) Create the Statement object
 The `createStatement()` method of Connection interface is used to create statement. The object of statement is responsible to execute queries with the database.
@@ -218,3 +219,4 @@ By closing connection object statement and ResultSet will be closed automaticall
 
     con.close();  
  
+GOOD WORK :call_me_hand: . Now, Go to [The First JDBC Application]() :running_man: 
