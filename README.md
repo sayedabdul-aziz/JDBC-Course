@@ -180,7 +180,7 @@ The `getConnection()` method of DriverManager class is used to establish connect
     return DriverManager.getConnection("jdbc:mysql://localhost:3306/DB_Name", "root", ""); 
     }
 
-*to Know about url and Server information* [Click Here]() .
+*to Know about url and Server information* [Click Here](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/LocalHost-Info) .
 
 Before `Step (4)`, Go to [Connection JDBC Application](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/Connection) that java code to get Connection with MySQL DB.  
 
