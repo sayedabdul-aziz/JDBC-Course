@@ -36,7 +36,7 @@ JDBC technology allows us to use the Java programming language to exploit “Wri
 ## Pre-requisite
 Before moving further, you need to have a good understanding of the following two subjects:
 - Java Basics ( including OOP, and Exception handling).
-- SQL language (basic queries).
+- SQL language (basic queries). Review from [HERE](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/SQL%20Review) .
 
 ## JDBC Architecture
 The JDBC API supports both two-tier and three-tier processing models for database access but in general, JDBC Architecture consists of two layers:
