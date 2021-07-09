@@ -22,7 +22,7 @@
 - [Connection](#connection)
   - [Environment Setup](#environment-setup)
   - [JDBC Application Process](#jdbc-application-process)
-- 
+- [Statement Interface](#statement-interface)
 - Contents Updated....
 
 # Introduction
@@ -45,6 +45,17 @@ The JDBC API supports both two-tier and three-tier processing models for databas
 - JDBC Driver API : This supports the JDBC Manager-to-Driver Connection.
 
 The JDBC API uses a driver manager and database-specific drivers to provide transparent connectivity to heterogeneous databases.
+
+**A list of popular interfaces of JDBC API are given below:**
+- Driver interface
+- Connection interface
+- Statement interface
+- PreparedStatement interface
+- CallableStatement interface
+- ResultSet interface
+- ResultSetMetaData interface
+- DatabaseMetaData interface
+- RowSet interface
 
 The JDBC driver manager ensures that the correct driver is used to access each data source. The driver manager is capable of supporting multiple concurrent drivers connected to multiple heterogeneous databases.
 
@@ -250,10 +261,19 @@ The important methods of Statement interface are as follows:
 
 |          |     Methode     |     Description    |
 |     :---:     |     :---:     |     :---:    |
-|1| public ResultSet executeQuery(String sql) | is used to execute SELECT query. It returns the object of ResultSet.   |
-|2| public int executeUpdate(String sql)  | is used to execute specified query, it may be create, drop, insert, update, delete etc.   |
-|3| public boolean execute(String sql)  | is used to execute queries that may return multiple results.  |
+|1| ResultSet executeQuery(String sql) | is used to execute SELECT query. It returns the object of ResultSet.   |
+|2| int executeUpdate(String sql)  | is used to execute specified query, it may be create, drop, insert, update, delete etc.   |
+|3| boolean execute(String sql)  | is used to execute queries that may return multiple results.  |
 
+## Statement Examples :
 
+- [Create a table using JDBC application](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/Create_Table) .
+- [Drop a table using JDBC application](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/Drop_Table) .
+- [Insert records in a table using JDBC application](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/Insert) .
+- [Insert records from User in a table using JDBC application](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/Insert_User) .
+- [Delete records from a table using JDBC application](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/Delete) .
+- [Update records in a table using JDBC application](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/Update) .
+- [Select records from a table using JDBC application](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/First_JDBC_APP) .
 
-
+  
+          
