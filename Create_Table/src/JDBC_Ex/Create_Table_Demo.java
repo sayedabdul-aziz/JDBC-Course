@@ -18,7 +18,7 @@ public class Create_Table_Demo {
             Statement st = connect.createStatement();
             //Execute the query  
             st.execute("Create table emp (ID int Primary Key auto_increment,"
-                    + "Name varchar(40), Gender boolean )");
+                    + "Name varchar(40), Gender varchar(10) )");
             System.out.println("Creating a table Successfully");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
