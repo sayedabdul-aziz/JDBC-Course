@@ -219,4 +219,41 @@ By closing connection object statement and ResultSet will be closed automaticall
 
     con.close();  
  
-GOOD WORK :call_me_hand: . Now, Go to [The First JDBC Application]() :running_man: 
+GOOD WORK :call_me_hand: . Now, Go to [The First JDBC Application](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/First_JDBC_APP) :running_man: 
+
+______________________________________________________________
+
+> If you didn't review on `SQL syntax`. Please!!, Go to review it from [HERE](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/SQL%20Review) .
+
+________________________________________________________
+
+# Statement Interface
+In JDBC the Statement is an interface that represents a SQL statement. We execute Statement objects, and for select queries, ResultSet objects will be generated, which is a table of data representing a database result set. We need a Connection object to create a Statement object.
+
+There are three types of JDBC statements :
+1) Statement
+2) PreparedStatement
+3) CallableStatement
+
+The first type i.e. Statement is also called as Simple Statement because it is used with simple SQL statements without parameters. The PreparedStatement and CallableStatement both are extended from Statement (or, Simple Statement). The PreparedStatement is used for precompiling SQL statements that might contain input parameters, and CallableStatement is used to execute stored procedures/functions that may contain both input and output parameters.
+
+JDBC Statement object acts as a vehicle between Java application and database software to send the SQL query from Java application to database software and to bring SQL query results back to Java application from database software.
+
+### Statement Objects
+#### Creating Statement Object
+Before you can use a Statement object to execute a SQL statement, you need to create one using the Connection object's `createStatement( )` method, as in the following example:
+
+    Statement stmt=con.createStatement();  
+    
+### Methods of Statement interface:
+The important methods of Statement interface are as follows:
+
+|          |     Methode     |     Description    |
+|     :---:     |     :---:     |     :---:    |
+|1| public ResultSet executeQuery(String sql) | is used to execute SELECT query. It returns the object of ResultSet.   |
+|2| public int executeUpdate(String sql)  | is used to execute specified query, it may be create, drop, insert, update, delete etc.   |
+|3| public boolean execute(String sql)  | is used to execute queries that may return multiple results.  |
+
+
+
+
