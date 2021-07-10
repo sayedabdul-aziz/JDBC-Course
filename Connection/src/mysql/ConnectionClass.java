@@ -14,7 +14,7 @@ public class ConnectionClass {
     private static final String USER ="root";
     private static final String PASS ="";
     private static final String URL = String.format("jdbc:mysql://%s:%d/%s",HOST,PORT,DB_NAME);
-     //    jdbc:mysql://localhost:3306/CheckConnect1
+     //    jdbc:mysql://localhost:3306/jdbc_course
     private static Connection connect;
     // Create Connection
     public Connection getConnection() {
