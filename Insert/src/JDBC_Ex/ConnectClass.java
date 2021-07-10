@@ -13,7 +13,7 @@ public class ConnectClass {
     private static final String USER = "root";
     private static final String PASS = "";
     private static final String URL = String.format("jdbc:mysql://%s:%d/%s",HOST,PORT,DB_NAME);
-    // URL = "jdbc:mysql://localhost:3306/employee"
+    // URL = "jdbc:mysql://localhost:3306/jdbc_course"
     static Connection con;
     
    public Connection getConnect() throws SQLException{
