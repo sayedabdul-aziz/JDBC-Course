@@ -23,6 +23,8 @@
   - [Environment Setup](#environment-setup)
   - [JDBC Application Process](#jdbc-application-process)
 - [Statement Interface](#statement-interface)
+- [PreparedStatement Interface](#preparedstatement-interface)
+- [ResultSet Interface](#resultset-interface)
 - Contents Updated....
 
 # Introduction
@@ -250,13 +252,12 @@ The first type i.e. Statement is also called as Simple Statement because it is u
 
 JDBC Statement object acts as a vehicle between Java application and database software to send the SQL query from Java application to database software and to bring SQL query results back to Java application from database software.
 
-### Statement Objects
-#### Creating Statement Object
+## Creating Statement Object
 Before you can use a Statement object to execute a SQL statement, you need to create one using the Connection object's `createStatement( )` method, as in the following example:
 
     Statement stmt=con.createStatement();  
     
-### Methods of Statement interface:
+## Methods of Statement interface:
 The important methods of Statement interface are as follows:
 
 |          |     Methode     |     Description    |
@@ -276,5 +277,71 @@ The important methods of Statement interface are as follows:
 - [Select records from a table using JDBC application](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/First_JDBC_APP) .
 - [Select records from a table using ArrayList](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/Select_List) .
 
-  
-          
+# PreparedStatement Interface  
+The PreparedStatement interface is a subinterface of Statement. It is used to execute parameterized query.
+
+The PreparedStatement interface extends the Statement interface that provides some more advanced features as follows:
+- Add parameters into you SQL statement using placeholders in the form of question marks (?). This helps you avoid SQL injection.
+- Reuse the PreparedStatement with new parameters in case you need to execute the SQL statement multiple times with different parameters.
+- Help increase performance of the executed statement by precompiling the SQL statement.
+
+## Creating PreparedStatement Object
+Before you can use a PreparedStatement you must first create it. You do so using the `Connection.prepareStatement()` .
+    
+    PreparedStatement preparedStatement = connection.prepareStatement(sql);  
+    
+## Methods of PreparedStatement interface:
+The important methods of Statement interface are as follows:
+
+|          |     Methode     |     Description    |
+|     :---:     |     :---:     |     :---:    |
+|1| void setInt(int paramIndex, int_value) | sets the integer value to the given parameter index.   |
+|2| void setString(int paramIndex, String_value)  | sets the String value to the given parameter index.   |
+|3| void setFloat(int paramIndex, float_value)  | sets the float value to the given parameter index.  |
+|4| void setDouble(int paramIndex, double_value)  | sets the double value to the given parameter index. |
+
+# ResultSet Interface
+The SQL statements that read data from a database query, return the data in a result set. The SELECT statement is the standard way to select rows from a database and view them in a result set. The java.sql.ResultSet interface represents the result set of a database query.
+
+A ResultSet object maintains a cursor that points to the current row in the result set. The term "result set" refers to the row and column data contained in a ResultSet object.
+
+## ResultSet Methods:
+The methods of the ResultSet interface can be broken down into two categories :
+
+- **Navigational methods** : Used to move the cursor around.
+- **Get methods** : Used to view the data in the columns of the current row being pointed by the cursor.
+
+### Navigational methods
+|          |     Methode     |     Description    |
+|     :---:     |     :---:     |     :---:    |
+| 1 |  boolean next( )  |  	is used to move the cursor to the one row next from the current position.   |
+| 2 |   boolean previous( ) |  	is used to move the cursor to the one row previous from the current position.   |   
+| 3 |    boolean first( ) |  	is used to move the cursor to the first row in result set object.   |
+| 4 |    boolean last( ) |  	is used to move the cursor to the last row in result set object.   |
+| 5 |   boolean absolute(int row) |  	is used to move the cursor to the specified row number in the ResultSet object.   |
+| 6 |   boolean relative(int row) |  	is used to move the cursor to the relative row number in the ResultSet object, it may be positive or negative.   |
+| 7 |   int getRow( )      |   Returns the row number that the cursor is pointing to.  |
+| 8 |  void beforeFirst( )     |      Moves the cursor just before the first row.   |
+| 9 |  public void afterLast( )     |      Moves the cursor just after the last row.  |
+
+### Get methods
+There is a get method for each of the **possible data types**, and each get method has two versions:
+- One that takes in a column name.
+- One that takes in a column index.
+
+|          |     Methode     |     Description    |
+|     :---:     |     :---:     |     :---:    |
+|1| int getInt(int columnIndex) |	is used to return the data of specified column index of the current row as int.  |
+|2|  int getInt(String columnName) |	is used to return the data of specified column name of the current row as int.  |
+|3|  String getString(int columnIndex) |	is used to return the data of specified column index of the current row as String.  |
+|4|  String getString(String columnName) |	is used to return the data of specified column name of the current row as String.  |
+
+## ResultSet Examples :
+A one example show all ResultSet methods in this [JDBC Application](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/ResultSet_Methods) .
+
+
+
+
+
+
+
