@@ -274,6 +274,7 @@ The important methods of Statement interface are as follows:
 - [Delete records from a table using JDBC application](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/Delete) .
 - [Update records in a table using JDBC application](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/Update) .
 - [Select records from a table using JDBC application](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/First_JDBC_APP) .
+- [Select records from a table using ArrayList](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/Select_List) .
 
   
           
