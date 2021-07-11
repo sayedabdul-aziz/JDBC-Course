@@ -215,5 +215,9 @@ The following operators can be used in the WHERE clause:
 | LIKE  	  |	Search for a pattern	  	  | `SELECT * FROM Customers WHERE City LIKE 'c%'; `  |
 | IN        |	To specify multiple possible values for a column	  | `SELECT * FROM Customers WHERE City IN ('Paris','Zagazig'); `  |
 
+## Reset auto_increment
 
+    SET @num := 0;
+    UPDATE tableName SET id = @num := (@num+1);
+    ALTER TABLE tableName AUTO_INCREMENT = 1;
 
