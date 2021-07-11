@@ -285,6 +285,10 @@ The PreparedStatement interface extends the Statement interface that provides so
 - Reuse the PreparedStatement with new parameters in case you need to execute the SQL statement multiple times with different parameters.
 - Help increase performance of the executed statement by precompiling the SQL statement.
 
+**Note:** 
+- We can use only “?” symbols in the place of values. No other symbols are allowed here.
+- “?” symbol is not allowed to replace table names and column names.
+
 ## Creating PreparedStatement Object
 Before you can use a PreparedStatement you must first create it. You do so using the `Connection.prepareStatement()` .
     
@@ -299,6 +303,13 @@ The important methods of Statement interface are as follows:
 |2| void setString(int paramIndex, String_value)  | sets the String value to the given parameter index.   |
 |3| void setFloat(int paramIndex, float_value)  | sets the float value to the given parameter index.  |
 |4| void setDouble(int paramIndex, double_value)  | sets the double value to the given parameter index. |
+
+## PreparedStatement Examples :
+- [Insert records in a table using JDBC application](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/Insert_PreparedStatement) .
+- [Insert records from User in a table using JDBC application](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/InsertUser_PreparedStatement) .
+- [Delete records from a table using JDBC application](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/Delete_PreparedStatement) .
+- [Update records in a table using JDBC application](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/Update_PreparedStatement) .
+- [Select records from a table using JDBC application](https://github.com/sayedabdul-aziz/JDBC-Cousre/tree/main/Select_PreparedStatement) .
 
 # ResultSet Interface
 The SQL statements that read data from a database query, return the data in a result set. The SELECT statement is the standard way to select rows from a database and view them in a result set. The java.sql.ResultSet interface represents the result set of a database query.
